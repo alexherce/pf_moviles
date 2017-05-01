@@ -27,7 +27,8 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
   		$response['message'] = "Email is already registered";
 		} else {
       $date_created = date('m/d/Y h:i:s a', time());
-      $query = "INSERT INTO PF_Users (email, first_name, last_name, zip_code, state, address, password, rol, created_date) VALUES ('$email','$first_name','$last_name','$zip_code','$state','$address','$password','$rol', '$date_created')";
+      $hashed_password = hash('sha256', $password);
+      $query = "INSERT INTO PF_Users (email, first_name, last_name, zip_code, state, address, password, rol, created_date) VALUES ('$email','$first_name','$last_name','$zip_code','$state','$address','$hashed_password','$rol', '$date_created')";
   		$qresult = $db->executeQuery($query);
 
       if($qresult){

@@ -12,7 +12,8 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
 	$pass = $_POST['password'];
 
 	if (!empty($email) && !empty($pass)) {
-		$query = "SELECT id, email, first_name, last_name, address, zip_code, state, rol FROM PF_Users WHERE email = '$email' AND password = '$pass'";
+    $hashed_password = hash('sha256', $pass);
+		$query = "SELECT id, email, first_name, last_name, address, zip_code, state, rol FROM PF_Users WHERE email = '$email' AND password = '$hashed_password'";
 		$qresult = $db->executeQuery($query);
 
     if(mysql_num_rows($qresult) == 1) {
