@@ -68,7 +68,7 @@ public class MainActivityUser extends AppCompatActivity {
         recyclerView.setAdapter(adaptador);
 
         final ProgressDialog progress_bar = new ProgressDialog(MainActivityUser.this);
-        progress_bar.setMessage(MainActivityUser.this.getString(R.string.logginginText));
+        progress_bar.setMessage(MainActivityUser.this.getString(R.string.loadingDataText));
         progress_bar.setCancelable(false);
         progress_bar.show();
 

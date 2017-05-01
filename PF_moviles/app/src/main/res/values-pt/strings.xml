@@ -24,4 +24,5 @@
     <string name="incorrectCredentialsText">Incorrect email and/or password</string>
     <string name="commsErrorText">Error! Could not connect to server. Try again later...</string>
     <string name="addtocartText">Add To Cart</string>
+    <string name="loadingDataText">Loading data, please wait...</string>
 </resources>

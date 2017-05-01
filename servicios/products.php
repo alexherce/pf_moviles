@@ -5,11 +5,11 @@ $db = new administradorBD();
 
 if($_SERVER['REQUEST_METHOD'] == 'GET') {
 
-	$id_producto = $_GET['id'];
+	$product_id = $_GET['id'];
 
-	if (isset($id_producto)) {
+	if (isset($product_id)) {
 
-		$query = "SELECT * FROM PF_Products WHERE id = $id_producto";
+		$query = "SELECT * FROM PF_Products WHERE id = $product_id";
 		$result = $db->executeQuery($query);
 
 	} else {
@@ -30,7 +30,7 @@ if($_SERVER['REQUEST_METHOD'] == 'GET') {
 		$response['product_data'] = $rows;
 	} else {
 		$response['code'] = "04";
-		$response['message'] = "Seems that there was an error :(";
+		$response['message'] = "Possible error executing the query.";
 	}
 	echo json_encode($response);
 }

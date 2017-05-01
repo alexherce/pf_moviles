@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
+import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -33,7 +34,7 @@ public class ProductDetailActivity extends AppCompatActivity {
 
     private String productID;
     private TextView nameTxt, brandTxt, descriptionTxt, priceTxt;
-    Product product = new Product();
+    private Button addToCartBtn;
     ImageLoader imageLoader = AppController.getInstance().getImageLoader();
     NetworkImageView image;
 
@@ -50,7 +51,7 @@ public class ProductDetailActivity extends AppCompatActivity {
         setContentView(R.layout.activity_product_detail);
 
         final ProgressDialog progress_bar = new ProgressDialog(ProductDetailActivity.this);
-        progress_bar.setMessage(ProductDetailActivity.this.getString(R.string.logginginText));
+        progress_bar.setMessage(ProductDetailActivity.this.getString(R.string.loadingDataText));
         progress_bar.setCancelable(false);
         progress_bar.show();
 
@@ -58,6 +59,7 @@ public class ProductDetailActivity extends AppCompatActivity {
         brandTxt = (TextView) findViewById(R.id.brandDetailText);
         descriptionTxt = (TextView) findViewById(R.id.descriptionDetailText);
         priceTxt = (TextView) findViewById(R.id.priceDetailText);
+        addToCartBtn = (Button) findViewById(R.id.addToCartButton);
         if (imageLoader == null)
             imageLoader = AppController.getInstance().getImageLoader();
         image = (NetworkImageView) findViewById(R.id.thumbnailDetail);
@@ -82,7 +84,7 @@ public class ProductDetailActivity extends AppCompatActivity {
 
                                 nameTxt.setText(product.getString("name"));
                                 brandTxt.setText(product.getString("brand"));
-                                descriptionTxt.setText(product.getString("description"));
+                                descriptionTxt.setText("ID: " + product.getString("id") + " | " + product.getString("description"));
                                 priceTxt.setText("$" + product.getDouble("price"));
                                 image.setImageUrl(product.getString("image_url"), imageLoader);
 
