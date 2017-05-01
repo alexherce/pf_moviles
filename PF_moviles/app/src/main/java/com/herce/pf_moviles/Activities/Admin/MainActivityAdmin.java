@@ -1,4 +1,4 @@
-package com.herce.pf_moviles.Activities;
+package com.herce.pf_moviles.Activities.Admin;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;

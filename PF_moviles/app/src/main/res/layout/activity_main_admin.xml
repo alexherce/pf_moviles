@@ -4,6 +4,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.herce.pf_moviles.Activities.MainActivityAdmin">
+    tools:context="com.herce.pf_moviles.Activities.Admin.MainActivityAdmin">
 
 </android.support.constraint.ConstraintLayout>

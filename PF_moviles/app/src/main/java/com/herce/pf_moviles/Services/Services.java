@@ -5,6 +5,7 @@ package com.herce.pf_moviles.Services;
  */
 
 public class Services {
-    public static final String LOGIN_API = "http://ubiquitous.csf.itesm.mx/~pddm-1021150/content/pf_api/login.php";
-    public static final String PRODUCTS_API = "http://ubiquitous.csf.itesm.mx/~pddm-1021150/content/pf_api/products.php";
+    public static final String LOGIN_API = "http://ubiquitous.csf.itesm.mx/~pddm-1021150/content/api_pf/login.php";
+    public static final String SIGNUP_API = "http://ubiquitous.csf.itesm.mx/~pddm-1021150/content/api_pf/signup.php";
+    public static final String PRODUCTS_API = "http://ubiquitous.csf.itesm.mx/~pddm-1021150/content/api_pf/products.php";
 }

@@ -1,6 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">Guacamole</string>
-    <string name="SignupTitle">Signup</string>
+    <string name="SignupTitle">Inscrição</string>
     <string name="emailText">Email</string>
     <string name="passwordText">Password</string>
     <string name="firstnameText">First name</string>

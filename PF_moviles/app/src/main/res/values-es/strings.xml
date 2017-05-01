@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Guacamole</string>
+    <string name="SignupTitle">Registro</string>
+    <string name="emailText">Email</string>
+    <string name="passwordText">Password</string>
+    <string name="firstnameText">First name</string>
+    <string name="lastnameText">Last name</string>
+    <string name="addressText">Address</string>
+    <string name="postalcodeText">Postal Code</string>
+    <string name="stateText">State</string>
+    <string name="signupButton">Signup</string>
+    <string name="loginButton">Have an account?</string>
+    <string name="logginginText">Iniciando sesión...</string>
+    <string name="passwordsNotMatchText">Contraseñas no coinciden</string>
+    <string name="signingupText">Registrando usuario...</string>
+    <string name="welcomeText">¡Bienvenido!</string>
+    <string name="signedupText">¡Listo! Ya puedes iniciar sesión.</string>
+    <string name="missingValuesText">Todos los campos son obligatorios</string>
+    <string name="userTakenText">Ese email ya esta registrado</string>
+    <string name="errorSigningupText">Ocurrió un error con el servidor al intentar el registro. Intenta de nuevo.</string>
+    <string name="unknownResponseText">¡Error! Respuesta del servidor no reconocida.</string>
+    <string name="queryErrorText">Ocurrió un error al ejecutar el query... Intenta de nuevo.</string>
+    <string name="incorrectCredentialsText">Email y/o contraseña incorrectos</string>
+    <string name="commsErrorText">¡Error! No se pudo conectar con el servidor. Intenta mas tarde...</string>
+    <string name="addtocartText">Add To Cart</string>
+</resources>
