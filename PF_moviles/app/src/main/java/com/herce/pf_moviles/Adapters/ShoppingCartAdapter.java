@@ -2,7 +2,6 @@ package com.herce.pf_moviles.Adapters;
 
 import android.content.Context;
 import android.content.Intent;
-import android.content.res.Resources;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentTransaction;
@@ -16,8 +15,6 @@ import android.widget.TextView;
 
 import com.android.volley.toolbox.ImageLoader;
 import com.android.volley.toolbox.NetworkImageView;
-import com.herce.pf_moviles.Activities.ProductDetailActivity;
-import com.herce.pf_moviles.Activities.ShoppingCartActivity;
 import com.herce.pf_moviles.Fragments.User.All.ProductDetailFragment;
 import com.herce.pf_moviles.Objects.Product;
 import com.herce.pf_moviles.R;
@@ -90,7 +87,6 @@ public class ShoppingCartAdapter extends RecyclerView.Adapter<ShoppingCartAdapte
             card.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    final Intent mainIntent = new Intent(viewItem.getContext(), ProductDetailActivity.class);
                     Bundle id = new Bundle();
                     id.putString("productID", String.valueOf(list.get(getAdapterPosition()).getProductID()));
                     Fragment newFragment = new ProductDetailFragment();

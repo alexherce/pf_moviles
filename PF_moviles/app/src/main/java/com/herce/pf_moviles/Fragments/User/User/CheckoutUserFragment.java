@@ -1,13 +1,10 @@
 package com.herce.pf_moviles.Fragments.User.User;
 
 import android.app.ProgressDialog;
-import android.content.Context;
-import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
-import android.support.v7.widget.StaggeredGridLayoutManager;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuInflater;
@@ -22,26 +19,20 @@ import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
-import com.herce.pf_moviles.Activities.User.CheckoutUserActivity;
-import com.herce.pf_moviles.Adapters.ProductsAdapter;
 import com.herce.pf_moviles.Adapters.ShoppingCartAdapter;
 import com.herce.pf_moviles.Objects.ShoppingCart;
 import com.herce.pf_moviles.Objects.User;
 import com.herce.pf_moviles.R;
 import com.herce.pf_moviles.Utilities.CommonClass;
-import com.herce.pf_moviles.Utilities.ParserJSONProducts;
 
-import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 
 import static com.herce.pf_moviles.Services.Services.CREATE_ORDER_API;
 import static com.herce.pf_moviles.Services.Services.ORDER_PRODUCT_API;
-import static com.herce.pf_moviles.Services.Services.PRODUCTS_API;
 
 public class CheckoutUserFragment extends Fragment {
 

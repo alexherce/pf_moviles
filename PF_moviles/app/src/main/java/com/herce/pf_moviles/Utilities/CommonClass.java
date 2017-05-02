@@ -7,9 +7,7 @@ import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AppCompatActivity;
 
 import com.herce.pf_moviles.Activities.LoginActivity;
-import com.herce.pf_moviles.Activities.ShoppingCartActivity;
 import com.herce.pf_moviles.Fragments.User.All.ShoppingCartFragment;
-import com.herce.pf_moviles.Fragments.User.User.CheckoutUserFragment;
 import com.herce.pf_moviles.Objects.ShoppingCart;
 import com.herce.pf_moviles.R;
 

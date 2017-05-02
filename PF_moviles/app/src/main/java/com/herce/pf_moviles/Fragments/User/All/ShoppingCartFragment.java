@@ -1,45 +1,23 @@
 package com.herce.pf_moviles.Fragments.User.All;
 
-import android.app.ProgressDialog;
-import android.content.Context;
-import android.content.Intent;
-import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentTransaction;
-import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
-import android.widget.SeekBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.android.volley.Request;
-import com.android.volley.Response;
-import com.android.volley.VolleyError;
-import com.android.volley.toolbox.NetworkImageView;
-import com.android.volley.toolbox.StringRequest;
-import com.android.volley.toolbox.Volley;
-import com.herce.pf_moviles.Activities.Employee.CheckoutEmployeeActivity;
-import com.herce.pf_moviles.Activities.ShoppingCartActivity;
-import com.herce.pf_moviles.Activities.User.CheckoutUserActivity;
 import com.herce.pf_moviles.Adapters.ShoppingCartAdapter;
 import com.herce.pf_moviles.Fragments.User.Admin.CheckoutAdminFragment;
 import com.herce.pf_moviles.Fragments.User.User.CheckoutUserFragment;
 import com.herce.pf_moviles.Objects.ShoppingCart;
 import com.herce.pf_moviles.Objects.User;
 import com.herce.pf_moviles.R;
-import com.herce.pf_moviles.Services.AppController;
-
-import org.json.JSONArray;
-import org.json.JSONException;
-import org.json.JSONObject;
-
-import static com.herce.pf_moviles.Services.Services.PRODUCTS_API;
 
 public class ShoppingCartFragment extends Fragment {
 
