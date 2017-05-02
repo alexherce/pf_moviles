@@ -12,6 +12,7 @@ public class Product {
     private Double Price;
     private String Brand;
     private Integer Category;
+    private Float Size;
 
     public void setProductID(Integer ProductID) {
         this.ProductID = ProductID;
@@ -68,5 +69,11 @@ public class Product {
     public Integer getCategory(){
         return Category;
     }
+
+
+    // FOR SHOPPING CART USE
+    public void setSize(Float Size) { this.Size = Size; }
+
+    public Float getSize() { return Size; }
 
 }

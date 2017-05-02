@@ -25,4 +25,19 @@
     <string name="commsErrorText">¡Error! No se pudo conectar con el servidor. Intenta mas tarde...</string>
     <string name="addtocartText">Add To Cart</string>
     <string name="loadingDataText">Cargando datos, por favor espere...</string>
+    <string name="pickSizeText">Elige tu tamaño:</string>
+    <string name="productAddedToCartText">Producto agregado al carrito con tamaño</string>
+    <string name="sizeText">Tamaño</string>
+    <string name="checkoutButtonText">Checkout</string>
+    <string name="shoppingCartTotalText">Total del carrito</string>
+    <string name="cartEmptyText">¡El carrito esta vacío!</string>
+    <string name="credentialsErrorText">¡Error! Inicia sesión de nuevo.</string>
+    <string name="sizeErrorText">Por favor escoge una talla mayor a 5</string>
+    <string name="outOfStockText">Sin disponibilidad</string>
+    <string name="orderedText">Pedido</string>
+    <string name="errorText">Error</string>
+    <string name="notOrderedText">No pedido</string>
+    <string name="orderDetailsText">Detalles del pedido</string>
+    <string name="myOrdersMenuText">Mis Ordenes</string>
+    <string name="logoutMenuText">Cerrar sesión</string>
 </resources>

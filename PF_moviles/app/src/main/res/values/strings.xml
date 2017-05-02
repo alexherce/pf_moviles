@@ -24,4 +24,22 @@
     <string name="commsErrorText">Error! Could not connect to server. Try again later...</string>
     <string name="addtocartText">Add To Cart</string>
     <string name="loadingDataText">Loading data, please wait...</string>
+    <string name="pickSizeText">Pick your size:</string>
+    <string name="productAddedToCartText">Product added to shopping cart with size</string>
+    <string name="sizeText">Size</string>
+    <string name="checkoutButtonText">Checkout</string>
+    <string name="shoppingCartTotalText">Cart Total</string>
+    <string name="cartEmptyText">The shopping cart is empty!</string>
+    <string name="credentialsErrorText">Error! Please log in again.</string>
+    <string name="sizeErrorText">Please choose a size bigger than 5</string>
+    <string name="outOfStockText">Out of stock</string>
+    <string name="orderedText">Ordered</string>
+    <string name="errorText">Error</string>
+    <string name="notOrderedText">Not ordered</string>
+    <string name="orderDetailsText">Order details</string>
+    <string name="myOrdersMenuText">My Orders</string>
+    <string name="logoutMenuText">Logout</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

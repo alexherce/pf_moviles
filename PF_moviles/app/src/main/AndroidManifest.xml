@@ -30,7 +30,10 @@
             android:name=".Activities.SignupActivity"
             android:theme="@style/Theme.AppCompat.NoActionBar" />
         <activity android:name=".Activities.User.MainActivityUser" />
-        <activity android:name=".Activities.ProductDetailActivity"></activity>
+        <activity android:name=".Activities.ProductDetailActivity" />
+        <activity android:name=".Activities.ShoppingCartActivity" />
+        <activity android:name=".Activities.User.CheckoutUserActivity" />
+        <activity android:name=".Activities.Employee.CheckoutEmployeeActivity"></activity>
     </application>
 
 </manifest>

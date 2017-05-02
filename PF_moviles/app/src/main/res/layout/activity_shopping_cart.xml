@@ -5,8 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context="com.herce.pf_moviles.Activities.ProductDetailActivity"
-    android:weightSum="1">
+    tools:context="com.herce.pf_moviles.Activities.ShoppingCartActivity">
 
 
 
