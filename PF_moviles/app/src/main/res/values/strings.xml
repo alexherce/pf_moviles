@@ -42,4 +42,11 @@
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="thankyouOrderText">Thank you for your order</string>
+    <string name="userProfileTitleText">Your Information</string>
+    <string name="nameText">Name</string>
+    <string name="shippingAddressText">Shipping Address</string>
+    <string name="editProfileButtonText">Edit Profile</string>
+    <string name="editProfileText">Edit Your Profile</string>
+    <string name="profileEditedSuccessText">Your profile was updated!</string>
 </resources>

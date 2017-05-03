@@ -35,7 +35,7 @@ public class ProductDetailFragment extends Fragment {
     private TextView nameTxt, brandTxt, descriptionTxt, priceTxt, sizeTxt;
     private String name, brand, description, imageURL;
     private Double price;
-    private Float size;
+    private Float size = 0.0f;
     private Integer id;
     private Button addToCartBtn;
     ImageLoader imageLoader = AppController.getInstance().getImageLoader();

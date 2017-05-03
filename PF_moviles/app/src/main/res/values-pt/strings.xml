@@ -40,4 +40,11 @@
     <string name="orderDetailsText">Order details</string>
     <string name="myOrdersMenuText">My Orders</string>
     <string name="logoutMenuText">Logout</string>
+    <string name="thankyouOrderText">Thank you for your order</string>
+    <string name="userProfileTitleText">Your Information</string>
+    <string name="nameText">Name</string>
+    <string name="shippingAddressText">Shipping Address</string>
+    <string name="editProfileButtonText">Edit Profile</string>
+    <string name="editProfileText">Edit Your Profile</string>
+    <string name="profileEditedSuccessText">Your profile was updated!</string>
 </resources>

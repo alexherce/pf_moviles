@@ -15,6 +15,7 @@
             android:layout_marginLeft="5dp"
             android:layout_marginRight="5dp"
             android:layout_marginTop="2.5dp"
+            android:layout_marginBottom="2.5dp"
             android:orientation="horizontal">
 
             <TextView
@@ -32,6 +33,7 @@
                 android:id="@+id/checkoutButton"
                 android:layout_width="149dp"
                 android:layout_height="36dp"
+                android:layout_marginBottom="2.5dp"
                 android:background="@color/green"
                 android:text="@string/checkoutButtonText"
                 android:textColor="@android:color/background_light"

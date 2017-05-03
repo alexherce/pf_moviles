@@ -14,6 +14,7 @@ import android.view.MenuItem;
 import com.herce.pf_moviles.Fragments.User.User.ProductsFragment;
 import com.herce.pf_moviles.Fragments.User.User.UserOrdersFragment;
 import com.herce.pf_moviles.Adapters.ProductsAdapter;
+import com.herce.pf_moviles.Fragments.User.User.UserProfileFragment;
 import com.herce.pf_moviles.Objects.Product;
 import com.herce.pf_moviles.R;
 import com.herce.pf_moviles.Utilities.CommonClass;
@@ -21,10 +22,6 @@ import com.herce.pf_moviles.Utilities.CommonClass;
 import java.util.ArrayList;
 
 public class MainActivityUser extends AppCompatActivity {
-
-    private RecyclerView recyclerView;
-    private ArrayList<Product> productList;
-    private ProductsAdapter adaptador;
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -53,7 +50,7 @@ public class MainActivityUser extends AppCompatActivity {
                                 selectedFragment = UserOrdersFragment.newInstance();
                                 break;
                             case R.id.action_item3:
-                                selectedFragment = UserOrdersFragment.newInstance();
+                                selectedFragment = UserProfileFragment.newInstance();
                                 break;
                         }
                         FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
