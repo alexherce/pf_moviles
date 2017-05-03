@@ -44,7 +44,7 @@ public class ProductsFragment extends Fragment {
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_products, container, false);
         recyclerView = (RecyclerView) view.findViewById(R.id.products_recycler);
-        recyclerView.setLayoutManager(new StaggeredGridLayoutManager(3, StaggeredGridLayoutManager.VERTICAL));
+        recyclerView.setLayoutManager(new StaggeredGridLayoutManager(2, StaggeredGridLayoutManager.VERTICAL));
 
         productList = new ArrayList<>();
         adaptador = new ProductsAdapter(getContext(),productList);

@@ -3,6 +3,7 @@ package com.herce.pf_moviles.Activities;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
 
 import com.herce.pf_moviles.R;
 
@@ -17,6 +18,8 @@ public class SplashActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_splash);
+        View view = this.getWindow().getDecorView();
+        view.setBackgroundResource(R.color.green);
 
         TimerTask task = new TimerTask() {
             @Override
