@@ -58,4 +58,32 @@ if($_SERVER['REQUEST_METHOD'] == 'POST') {
   }
   echo json_encode($response);
 }
+
+if($_SERVER['REQUEST_METHOD'] == 'GET') {
+
+  $id_order = $_GET['id_order'];
+
+  if(!empty($id_order)) {
+
+    $query = "SELECT p.id, p.name, p.brand, p.image_url, p.description, o.subtotal, o.size, o.status FROM PF_OrderProducts o INNER JOIN PF_Products p ON o.id_product = p.id  WHERE o.id_order = '$id_order'";
+    $result = $db->executeQuery($query);
+
+    if ($result) {
+      $rows = array();
+    	while($r = mysql_fetch_assoc($result)) {
+        	$rows[] = $r;
+    	}
+      $response['code'] = "01";
+      $response['order_products_data'] = $rows;
+    } else {
+        $response['code'] = "03";
+        $response['message'] = "Not existing products";
+    }
+
+  } else {
+    $response['code'] = "02";
+    $response['message'] = "Missing mandatory parameters";
+  }
+  echo json_encode($response);
+}
 ?>

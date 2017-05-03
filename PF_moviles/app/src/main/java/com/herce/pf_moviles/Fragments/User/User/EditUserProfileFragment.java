@@ -51,6 +51,7 @@ public class EditUserProfileFragment extends Fragment {
                              ViewGroup container,
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_edit_user_profile, container, false);
+        view.setBackgroundResource(R.color.white);
 
         firstnameField = (EditText) view.findViewById(R.id.firstNameEditProfileTextField);
         lastnameField  = (EditText) view.findViewById(R.id.lastnameEditProfileTextField);

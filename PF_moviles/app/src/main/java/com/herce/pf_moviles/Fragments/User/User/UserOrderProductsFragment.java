@@ -1,11 +1,12 @@
 package com.herce.pf_moviles.Fragments.User.User;
 
 import android.app.ProgressDialog;
+import android.content.Context;
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
-import android.support.v7.widget.StaggeredGridLayoutManager;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -17,7 +18,7 @@ import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
 import com.herce.pf_moviles.Adapters.OrdersAdapter;
-import com.herce.pf_moviles.Adapters.ProductsAdapter;
+import com.herce.pf_moviles.Adapters.ShoppingCartAdapter;
 import com.herce.pf_moviles.Objects.Order;
 import com.herce.pf_moviles.Objects.Product;
 import com.herce.pf_moviles.Objects.ShoppingCart;
@@ -33,36 +34,42 @@ import org.json.JSONObject;
 import java.util.ArrayList;
 
 import static com.herce.pf_moviles.Services.Services.ORDERS_API;
-import static com.herce.pf_moviles.Services.Services.PRODUCTS_API;
+import static com.herce.pf_moviles.Services.Services.ORDER_PRODUCT_API;
 
-
-public class UserOrdersFragment extends Fragment {
+public class UserOrderProductsFragment extends Fragment {
 
     private RecyclerView recyclerView;
-    private ArrayList<Order> orderList;
-    private OrdersAdapter adapter;
+    private ArrayList<Product> productList;
+    private ShoppingCartAdapter adapter;
+    String orderID;
 
-    public static UserOrdersFragment newInstance() {
-        UserOrdersFragment fragment = new UserOrdersFragment();
+    public static UserOrderProductsFragment newInstance() {
+        UserOrderProductsFragment fragment = new UserOrderProductsFragment();
         return fragment;
     }
 
     public View onCreateView(LayoutInflater inflater,
                              ViewGroup container,
                              Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.fragment_user_orders, container, false);
-        recyclerView = (RecyclerView) view.findViewById(R.id.orders_recycler);
+        View view = inflater.inflate(R.layout.fragment_user_order_products, container, false);
+        recyclerView = (RecyclerView) view.findViewById(R.id.orderproducts_recycler);
         recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
-        orderList = new ArrayList<>();
-        adapter = new OrdersAdapter(getContext(),orderList);
+        productList = new ArrayList<>();
+        adapter = new ShoppingCartAdapter(getContext(), productList);
         recyclerView.setAdapter(adapter);
+
+        Bundle myIntent = this.getArguments();
+
+        if(myIntent != null) {
+            orderID = myIntent.getString("orderID");
+        }
 
         final ProgressDialog progress_bar = new ProgressDialog(getContext());
         progress_bar.setMessage(getContext().getString(R.string.loadingDataText));
         progress_bar.setCancelable(false);
         progress_bar.show();
 
-        StringRequest productsReq = new StringRequest(Request.Method.GET, ORDERS_API + "?customer_id=" + User.getInstance().getUserID(),
+        StringRequest productsReq = new StringRequest(Request.Method.GET, ORDER_PRODUCT_API + "?id_order=" + orderID,
                 new Response.Listener<String>() {
                     @Override
                     public void onResponse(String response) {
@@ -71,10 +78,10 @@ public class UserOrdersFragment extends Fragment {
                             JSONObject res = new JSONObject(response);
                             if (res.getString("code").equals("01"))
                             {
-                                JSONArray orders = res.getJSONArray("order_data");
-                                orderList = ParserJSONOrders.parseaArreglo(orders);
+                                JSONArray products = res.getJSONArray("order_products_data");
+                                productList = ParserJSONProducts.parseaArregloOrderProducts(products);
 
-                                adapter = new OrdersAdapter(getContext(), orderList);
+                                adapter = new ShoppingCartAdapter(getContext(), productList);
                                 recyclerView.setAdapter(adapter);
                                 adapter.notifyDataSetChanged();
 
@@ -107,18 +114,16 @@ public class UserOrdersFragment extends Fragment {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        getActivity().setTitle(R.string.myOrdersMenuText);
+        getActivity().setTitle(R.string.viewOrderProductsButton);
     }
 
     public void onStop () {
         super.onStop();
         getActivity().setTitle(R.string.app_name);
-        orderList.clear();
     }
 
     public void onDestroy () {
         super.onDestroy();
         getActivity().setTitle(R.string.app_name);
-        orderList.clear();
     }
 }

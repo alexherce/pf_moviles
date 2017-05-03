@@ -3,6 +3,8 @@ package com.herce.pf_moviles.Utilities;
 import android.util.Log;
 
 import com.herce.pf_moviles.Objects.Product;
+import com.herce.pf_moviles.R;
+import com.herce.pf_moviles.Services.AppController;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -53,6 +55,42 @@ public class ParserJSONProducts {
                 product.setImageURL(obj.getString("image_url"));
                 product.setPrice(obj.getDouble("price"));
                 product.setCategory(obj.getInt("id_category"));
+
+                _array_products.add(product);
+            }
+            return _array_products;
+
+        } catch (JSONException e1) {
+            e1.printStackTrace();
+            return null;
+        }
+    }
+
+    public static ArrayList<Product> parseaArregloOrderProducts(JSONArray arr) {
+
+        JSONObject obj = null;
+        Product product = null;
+        _array_products.clear();
+
+        try {
+            for(int i = 0;i<arr.length();i++) {
+
+                obj = arr.getJSONObject(i);
+                product = new Product();
+
+                product.setProductID(obj.getInt("id"));
+                product.setName(obj.getString("name"));
+                if(obj.getInt("status") == 1) {
+                    product.setDescription(AppController.getInstance().getApplicationContext().getResources().getString(R.string.orderPendingText));
+                } else if (obj.getInt("status") == 2) {
+                    product.setDescription(AppController.getInstance().getApplicationContext().getResources().getString(R.string.orderShippedText));
+                } else {
+                    product.setDescription(AppController.getInstance().getApplicationContext().getResources().getString(R.string.orderCompletedText));
+                }
+                product.setBrand(obj.getString("brand"));
+                product.setImageURL(obj.getString("image_url"));
+                product.setPrice(obj.getDouble("subtotal"));
+                product.setSize((float) obj.getDouble("size"));
 
                 _array_products.add(product);
             }

@@ -10,6 +10,7 @@ import android.support.v7.widget.RecyclerView;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
+import android.view.View;
 
 import com.herce.pf_moviles.Fragments.User.User.ProductsFragment;
 import com.herce.pf_moviles.Fragments.User.User.UserOrdersFragment;
@@ -34,6 +35,8 @@ public class MainActivityUser extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main_user);
+        View view = this.getWindow().getDecorView();
+        view.setBackgroundResource(R.color.grey);
         BottomNavigationView bottomNavigationView = (BottomNavigationView)
                 findViewById(R.id.navigation);
 

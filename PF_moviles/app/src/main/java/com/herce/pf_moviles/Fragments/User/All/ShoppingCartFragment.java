@@ -66,6 +66,7 @@ public class ShoppingCartFragment extends Fragment {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        getActivity().setTitle(R.string.shoppingCartTitle);
     }
 
     void doCheckout() {
@@ -87,5 +88,15 @@ public class ShoppingCartFragment extends Fragment {
         } else {
             Toast.makeText(getContext(), R.string.credentialsErrorText , Toast.LENGTH_SHORT).show();
         }
+    }
+
+    public void onStop () {
+        super.onStop();
+        getActivity().setTitle(R.string.app_name);
+    }
+
+    public void onDestroy () {
+        super.onDestroy();
+        getActivity().setTitle(R.string.app_name);
     }
 }

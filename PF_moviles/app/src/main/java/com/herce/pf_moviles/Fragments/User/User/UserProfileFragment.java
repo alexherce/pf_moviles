@@ -50,6 +50,7 @@ public class UserProfileFragment extends Fragment {
                              ViewGroup container,
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_user_profile, container, false);
+        view.setBackgroundResource(R.color.white);
 
         nameTxt = (TextView)view.findViewById(R.id.nameProfileText);
         emailTxt  = (TextView)view.findViewById(R.id.emailProfileText);

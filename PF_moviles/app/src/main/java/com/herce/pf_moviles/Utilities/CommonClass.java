@@ -9,6 +9,7 @@ import android.support.v7.app.AppCompatActivity;
 import com.herce.pf_moviles.Activities.LoginActivity;
 import com.herce.pf_moviles.Fragments.User.All.ShoppingCartFragment;
 import com.herce.pf_moviles.Objects.ShoppingCart;
+import com.herce.pf_moviles.Objects.User;
 import com.herce.pf_moviles.R;
 
 /**
@@ -30,6 +31,7 @@ public class CommonClass {
                 ShoppingCart.getInstance().shoppingCartArray.clear();
                 ShoppingCart.getInstance().setShoppingCartTotal(0.0);
                 actividad = new Intent(c, LoginActivity.class);
+                actividad.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_NEW_TASK);
                 c.startActivity(actividad);
                 break;
 

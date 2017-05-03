@@ -49,4 +49,18 @@
     <string name="editProfileButtonText">Edit Profile</string>
     <string name="editProfileText">Edit Your Profile</string>
     <string name="profileEditedSuccessText">Your profile was updated!</string>
+    <string name="orderDateText">Date</string>
+    <string name="orderTotalText">Order Total</string>
+    <string name="orderText">Order</string>
+    <string name="orderStatusText">Status</string>
+    <string name="orderPendingText">Pending</string>
+    <string name="orderShippingText">Shipping</string>
+    <string name="orderShippedText">Shipped</string>
+    <string name="orderCompletedText">Completed</string>
+    <string name="shoppingCartTitle">Shopping Cart</string>
+    <string name="viewOrderProductsButton">Ordered Products</string>
+    <string name="orderIDText">Order ID</string>
+    <string name="cancelOrderText">Cancel Order</string>
+    <string name="confirmCancelOrderText">Are you sure you want to cancel this order? This cannot be undone.</string>
+    <string name="orderCanceledText">Your order was canceled</string>
 </resources>

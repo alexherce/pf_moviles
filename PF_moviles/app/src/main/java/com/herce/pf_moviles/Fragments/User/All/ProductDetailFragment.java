@@ -51,6 +51,7 @@ public class ProductDetailFragment extends Fragment {
                              ViewGroup container,
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_product_detail, container, false);
+        view.setBackgroundResource(R.color.white);
 
         final ProgressDialog progress_bar = new ProgressDialog(getContext());
         progress_bar.setMessage(getContext().getString(R.string.loadingDataText));
