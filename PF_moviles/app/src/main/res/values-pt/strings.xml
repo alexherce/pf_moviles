@@ -61,4 +61,6 @@
     <string name="cancelOrderText">Cancel Order</string>
     <string name="confirmCancelOrderText">Are you sure you want to cancel this order? This cannot be undone.</string>
     <string name="orderCanceledText">Your order was canceled</string>
+    <string name="editButtonText">Edit</string>
+    <string name="deleteButtonText">Delete</string>
 </resources>

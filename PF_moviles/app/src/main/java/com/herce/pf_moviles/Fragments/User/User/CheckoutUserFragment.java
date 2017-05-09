@@ -31,7 +31,7 @@ import org.json.JSONObject;
 import java.util.HashMap;
 import java.util.Map;
 
-import static com.herce.pf_moviles.Services.Services.CREATE_ORDER_API;
+import static com.herce.pf_moviles.Services.Services.ORDERS_API;
 import static com.herce.pf_moviles.Services.Services.ORDER_PRODUCT_API;
 
 public class CheckoutUserFragment extends Fragment {
@@ -82,7 +82,7 @@ public class CheckoutUserFragment extends Fragment {
     }
 
     void createOrder() {
-        StringRequest orderReq = new StringRequest(Request.Method.POST, CREATE_ORDER_API,
+        StringRequest orderReq = new StringRequest(Request.Method.POST, ORDERS_API,
                 new Response.Listener<String>() {
                     @Override
                     public void onResponse(String response) {

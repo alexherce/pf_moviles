@@ -22,7 +22,6 @@
             </intent-filter>
         </activity>
         <activity android:name=".Activities.Admin.MainActivityAdmin" />
-        <activity android:name=".Activities.MainActivityVentas" />
         <activity
             android:name=".Activities.LoginActivity"
             android:theme="@style/Theme.AppCompat.NoActionBar" />

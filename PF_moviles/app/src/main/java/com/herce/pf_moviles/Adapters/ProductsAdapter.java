@@ -14,8 +14,10 @@ import android.widget.TextView;
 
 import com.android.volley.toolbox.ImageLoader;
 import com.android.volley.toolbox.NetworkImageView;
+import com.herce.pf_moviles.Fragments.User.Admin.ProductDetailAdminFragment;
 import com.herce.pf_moviles.Fragments.User.All.ProductDetailFragment;
 import com.herce.pf_moviles.Objects.Product;
+import com.herce.pf_moviles.Objects.User;
 import com.herce.pf_moviles.R;
 import com.herce.pf_moviles.Services.AppController;
 
@@ -82,13 +84,23 @@ public class ProductsAdapter extends RecyclerView.Adapter<ProductsAdapter.ViewHo
                     Bundle id = new Bundle();
                     id.putString("productID", String.valueOf(list.get(getAdapterPosition()).getProductID()));
 
-                    Fragment newFragment = new ProductDetailFragment();
-                    FragmentTransaction transaction = ((AppCompatActivity)context).getSupportFragmentManager().beginTransaction();
-                    newFragment.setArguments(id);
-                    transaction.replace(R.id.frame_layout, newFragment);
-                    transaction.addToBackStack(null);
-                    // Commit the transaction
-                    transaction.commit();
+                    if(User.getInstance().getRole() == 1) {
+                        Fragment newFragment = new ProductDetailAdminFragment();
+                        FragmentTransaction transaction = ((AppCompatActivity)context).getSupportFragmentManager().beginTransaction();
+                        newFragment.setArguments(id);
+                        transaction.replace(R.id.frame_layout_admin, newFragment);
+                        transaction.addToBackStack(null);
+                        // Commit the transaction
+                        transaction.commit();
+                    } else {
+                        Fragment newFragment = new ProductDetailFragment();
+                        FragmentTransaction transaction = ((AppCompatActivity)context).getSupportFragmentManager().beginTransaction();
+                        newFragment.setArguments(id);
+                        transaction.replace(R.id.frame_layout, newFragment);
+                        transaction.addToBackStack(null);
+                        // Commit the transaction
+                        transaction.commit();
+                    }
                 }
             });
 

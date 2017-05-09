@@ -61,4 +61,6 @@
     <string name="cancelOrderText">Cancel Order</string>
     <string name="confirmCancelOrderText">¿Estas seguro que deseas cancelar esta orden? Esta acción no se puede deshacer.</string>
     <string name="orderCanceledText">Tu orden ha sido cancelada</string>
+    <string name="editButtonText">Edit</string>
+    <string name="deleteButtonText">Delete</string>
 </resources>

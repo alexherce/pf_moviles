@@ -43,6 +43,8 @@ public class LoginActivity extends AppCompatActivity {
         View view = this.getWindow().getDecorView();
         view.setBackgroundResource(R.color.green);
 
+        progress_bar = new ProgressDialog(LoginActivity.this);
+
         loginBtn = (Button)findViewById(R.id.loginButton);
         signupBtn = (Button)findViewById(R.id.signupButtonLogin);
         emailTxt = (EditText)findViewById(R.id.emailTextField);
@@ -66,7 +68,6 @@ public class LoginActivity extends AppCompatActivity {
 
     private void login()
     {
-        final ProgressDialog progress_bar = new ProgressDialog(LoginActivity.this);
         progress_bar.setMessage(LoginActivity.this.getString(R.string.logginginText));
         progress_bar.setCancelable(false);
         progress_bar.show();
@@ -95,8 +96,7 @@ public class LoginActivity extends AppCompatActivity {
                                     Intent actividad = new Intent(LoginActivity.this, MainActivityAdmin.class);
                                     startActivity(actividad);
                                 } else if (userData.getInstance().getRole() == 2) {
-                                    Intent actividad = new Intent(LoginActivity.this, MainActivityVentas.class);
-                                    startActivity(actividad);
+
                                 }else {
                                     Intent actividad = new Intent(LoginActivity.this, MainActivityUser.class);
                                     startActivity(actividad);
